@@ -23,6 +23,7 @@ function App() {
   useEffect(() => {
     const getTokens = async () => {
       const { data } = await client.query(query).toPromise();
+      console.log(data)
       setTokens(data.tokens);
     };
     getTokens();
